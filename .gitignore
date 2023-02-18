@@ -1,5 +1,9 @@
+# Scripts repository git ignore file.
+
+# Ignore Python files
 */*/.virtualenv/*
 */*/config.py
 */*/__pycache__/*
 
+# Ignore .DS_Store information
 **/.DS_Store
