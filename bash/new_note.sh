@@ -26,6 +26,7 @@ function meeting_note () {
 function research_note () {
     echo "Creating a new research note ..."
     NEW_NOTE=$NOTE_TOPIC.md
+    
     if [[ -f $NOTE_DIR/$NEW_NOTE ]]; then
         vim $NOTE_DIR/$NEW_NOTE
     else
