@@ -28,16 +28,16 @@ function research_note () {
     NEW_NOTE=$NOTE_TOPIC.md
     
     if [[ -f $NOTE_DIR/$NEW_NOTE ]]; then
-        vim $NOTE_DIR/$NEW_NOTE
+        cd $NOTE_DIR
     else
         note_template
-        vim $NOTE_DIR/$NEW_NOTE
+        cd $NOTE_DIR/$NEW_NOTE
     fi
 }
 
 # Main function for script. Calls specific functions for purpose.
 function note_purpose () {
-    NOTE_DIR=$HOME/wiki/unsorted-$1
+    NOTE_DIR=$HOME/wiki/$1-notes
 
     # Create the note directory if not present.
     if [[ ! -d $NOTE_DIR ]]; then
